@@ -1,6 +1,6 @@
 # Fasticons 0.0.1-alpha
 
-![Fasticons logo](https://raw.githubusercontent.com/stenito/fasticons/master/fasticonslogo.svg)
+![Fasticons logo](https://raw.githubusercontent.com/stenito/fasticons/master/doc%20assets/fasticonslogo.svg)
 
 Fasticons is a small bundle to add social and other icons faster and easier to your website.
 
@@ -9,6 +9,22 @@ It uses one svg file to hold the icons as symbols.
 If you find an [issue](https://github.com/stenito/fasticons/issues) with something or have a [question](https://github.com/stenito/fasticons/labels/question), please do not hesitate to [post it here](https://github.com/stenito/fasticons/issues).
 
 Please post [feature requests here](https://github.com/stenito/fasticons/labels/enhancement). Check if your request is already listed before.
+
+## Available icons
+
+[!Available icons](https://github.com/stenito/fasticons/blob/master/doc%20assets/fasticons.png?raw=true)
+
+- Facebook
+- Instagram
+- Github
+- Whatsapp
+- Youtube
+- Vimeo
+- Reddit
+- Snapchat
+- Twitter
+- Pinterest
+- Linkedin
 
 ## Features
 
@@ -36,20 +52,6 @@ A set of icons can be stylesd in a horizontal (default) or vertical list.
 ### With or without link
 
 A tekst or link can be added on the right or below the icon.
-
-## Available icons
-
-- Facebook
-- Instagram
-- Github
-- Whatsapp
-- Youtube
-- Vimeo
-- Reddit
-- Snapchat
-- Twitter
-- Pinterest
-- Linkedin
 
 ## Usage
 

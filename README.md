@@ -124,7 +124,7 @@ If you prefer to use the compiled and/or minified css, you can use [this online 
 
 > **IMPORTANT NOTICE:** I plan to [include a compiled and minified css file in the near future](https://github.com/stenito/fasticons/projects/1). The limits of using a compiled file is that you can only change the icon size by changing it manually everywhere it is used. Due to calculation of the sizes, this is virtually impossible. Another option is to include a css version that uses css variables. Let me know if you would like that by [requesting it as an enhancement](https://github.com/stenito/fasticons/labels/enhancement).
 
-1. OPTIONAL: **Include** the javascript file just before the `</body>`closing tag.  
+2. OPTIONAL: **Include** the javascript file just before the `</body>`closing tag.  
 OPTIONAL: You can also **copy and paste** this snippet before the `</body>`closing tag:
 
 > **IMPORTANT NOTICE:** The JavaScript snippet below is compiled to work cross browser. The original script in the bundle is NOT COMPILED and supports ES6. I plan to [include a compiled and minified script in the near future](https://github.com/stenito/fasticons/projects/1).

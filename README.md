@@ -69,7 +69,7 @@ Size: 7kb
 
 ---
 
-`style.scss` is an sass file with the styles for the icons as well as a few rules for the example file. See Usage.
+`style.scss` is a sass file with the styles for the icons as well as a few rules for the example file. See Usage.
 
 Size: 2.1kb
 

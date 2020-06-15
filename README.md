@@ -12,6 +12,8 @@ Please post [feature requests here](https://github.com/stenito/fasticons/labels/
 
 ## Available icons
 
+> This is a screenshot of the icons. The quality of the SVG icons is razorsharp :).
+
 ![Available icons](https://raw.githubusercontent.com/stenito/fasticons/master/doc%20assets/fasticons.png)
 
 - Facebook
@@ -32,6 +34,8 @@ Please post [feature requests here](https://github.com/stenito/fasticons/labels/
 
 The icons are scalable. To keep the scss file small, I opted to size all icons to the same size.
 
+[Learn how to change the size of the icons]()
+
 ### Icon styles
 
 There are 4 icon styles available:
@@ -41,17 +45,25 @@ There are 4 icon styles available:
 - Rounded more
 - Circle
 
+[Learn how to change the style of an icon]()
+
 ### Icon colors
 
 The icons can be styled in black, in the default color set in css (`grey`) or in brand identity colors that can be set with a class per icon or automatically with JavaScript.
+
+[Learn how to change the color of the icons]()
 
 ### Horizontal and vertical lists
 
 A set of icons can be styled in a horizontal (default) or vertical list.
 
+[Learn how to display icon lists in different ways]()
+
 ### With or without link
 
 A tekst or link can be added on the right or below the icon.
+
+[Learn how to add a tewt with or without link]()
 
 ## Usage
 

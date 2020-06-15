@@ -78,7 +78,7 @@ I created this small bundle after I discovered a similar aproach for social icon
 ```
 
 ---
-`assets/si.svg` currently holds 11 available icons. See Usage.
+`assets/si.svg` currently holds 11 available icons. See [Usage](#).
 
 ``` svg
 
@@ -97,7 +97,7 @@ I created this small bundle after I discovered a similar aproach for social icon
 Size: 8.9kb
 
 ---
-`js/fasticons.js` is a very small script to automate the use of colored icons. See [Usage](#).
+`js/fasticons.js` is a very small script to automate the use of colored icons. See [Usage](#Installation).
 
 Size: 471b
 

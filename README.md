@@ -12,6 +12,8 @@ Please post [feature requests here](https://github.com/stenito/fasticons/labels/
 
 ## Available icons
 
+I will add new icons as i need them or when requested. [Request new or additional icons here](https://github.com/stenito/fasticons/labels/new%20icon%20request).
+
 > This is a screenshot of the icons. The quality of the SVG icons is razorsharp :).
 
 ![Available icons](https://raw.githubusercontent.com/stenito/fasticons/master/doc%20assets/fasticons.png)
@@ -27,6 +29,8 @@ Please post [feature requests here](https://github.com/stenito/fasticons/labels/
 - Twitter
 - Pinterest
 - Linkedin
+
+[Request new or additional icons here](https://github.com/stenito/fasticons/labels/new%20icon%20request).
 
 ## Features
 

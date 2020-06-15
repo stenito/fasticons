@@ -1,5 +1,7 @@
 # Fasticons 0.0.1-alpha
 
+![Fasticons logo](https://raw.githubusercontent.com/stenito/fasticons/master/fasticonslogo.svg)
+
 Fasticons is a small bundle to add social and other icons faster and easier to your website.
 
 It uses one svg file to hold the icons as symbols.

@@ -12,7 +12,7 @@ Please post [feature requests here](https://github.com/stenito/fasticons/labels/
 
 ## Available icons
 
-[!Available icons](https://github.com/stenito/fasticons/blob/master/doc%20assets/fasticons.png?raw=true)
+![Available icons](https://raw.githubusercontent.com/stenito/fasticons/master/doc%20assets/fasticons.png)
 
 - Facebook
 - Instagram

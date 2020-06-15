@@ -4,6 +4,8 @@ Fasticons is a small bundle to add social and other icons faster and easier to y
 
 It uses one svg file to hold the icons as symbols.
 
+If you find an [issue](https://github.com/stenito/fasticons/issues) with something or have a [question](https://github.com/stenito/fasticons/issues), please do not hesitate to [post it here](https://github.com/stenito/fasticons/issues).
+
 ## Available icons
 
 - Facebook
@@ -57,22 +59,55 @@ It uses one svg file to hold the icons as symbols.
 Size: 8.9kb
 
 ---
-`js/fasticons.js` is a small script to automate the use of colored icons. See Usage.
+`js/fasticons.js` is a very small script to automate the use of colored icons. See [Usage](#).
 
 Size: 471b
 
 ---
 
-`index.html` is an example file with the available icons, each in 4 versions. See Usage.
+`index.html` is an example file with the available icons, each in 4 versions. See [Usage](#).
 
 Size: 7kb
 
 ---
 
-`style.scss` is a sass file with the styles for the icons as well as a few rules for the example file. See Usage.
+`style.scss` is a sass file with the styles for the icons as well as a few rules for the example file. See [Usage](#).
 
 Size: 2.1kb
 
 ---
 
 ## Usage
+
+### Introduction
+
+I created this small bundle after I discovered a similar aproach for social icons on the basic pages Jekyll installs. As the functionality and flexibility is limited, I decided to do a little more research and testing to see if i could make the system more flexible.
+
+### Features
+
+#### Scalable icons
+
+The icons are scalable. To keep the scss file small, I opted to size all icons to the same size.
+
+#### Icon styles
+
+There are 4 icon styles available:
+
+- Square
+- Rounded
+- Rounded more
+- Circle
+
+#### Icon colors
+
+The icons can be styled in black, in the default color set in css (`grey`) or in brand identity colors that can be set with a class per icon or automatically with JavaScript.
+
+#### Horizontal and vertical lists
+
+A set of icons can be stylesd in a horizontal (default) or vertical list.
+
+#### With or without link
+
+A tekst or link can be added on the right or below the icon.
+
+### Installation

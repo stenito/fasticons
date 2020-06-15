@@ -47,7 +47,7 @@ The icons can be styled in black, in the default color set in css (`grey`) or in
 
 ### Horizontal and vertical lists
 
-A set of icons can be stylesd in a horizontal (default) or vertical list.
+A set of icons can be styled in a horizontal (default) or vertical list.
 
 ### With or without link
 
@@ -144,6 +144,6 @@ fasticons();
 
 ```
 
-3. ...
+3. Add si.svg to your assets folder. You can customise si.svg to remove any icons you will not use or even add your own! I will [provide detailed specifications for creating additional icons in the nera future](https://github.com/stenito/fasticons/projects/1).
 
 1. ...

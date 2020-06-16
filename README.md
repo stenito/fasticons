@@ -42,7 +42,7 @@ I will add new icons as i need them or when requested. [Request new or additiona
 
 The icons are scalable. To keep the scss file small, I opted to size all icons to the same size.
 
-[Learn how to change the size of the icons]()
+[Learn how to change the size of the icons](#Changing-the-size-of-the-icons)
 
 ### Icon styles
 
@@ -53,25 +53,25 @@ There are 4 icon styles available:
 - Rounded more
 - Circle
 
-[Learn how to change the style of an icon]()
-
-### Automated (or not) Icon colors
-
-The icons can be styled in black, in the default color set in css (`grey`) or in brand identity colors that can be set with a class per icon or automatically with JavaScript.
-
-[Learn how to change the color of the icons]()
+[Learn how to change the style of an icon](#Setting-the-style-of-an-icon)
 
 ### Horizontal and vertical lists
 
 A set of icons can be styled in a horizontal (default) or vertical list.
 
-[Learn how to display icon lists in different ways]()
+[Learn how to display icon lists in different ways](#Changing-the-list-alignment)
+
+### Automated (or not) Icon colors
+
+The icons can be styled in black, in the default color set in css (`grey`) or in brand identity colors that can be set with a class per icon or automatically for all with JavaScript.
+
+[Learn how to change the color of the icons](#Changing-the-color-of-the-icons)
 
 ### With or without link
 
 A tekst or link can be added on the right or below the icon.
 
-[Learn how to add a tewt with or without link]()
+[Learn how to add a text with or without link](#Adding-text-to-an-icon)
 
 ### Sass ans plain CSS
 
@@ -84,14 +84,27 @@ Both versions have some settings variables you can adjust.
 - [Introduction](#Introduction)
 - [Dev languages](#Dev-languages)
 - [Files](#Files)
-  - [Repository tree](#Repositor-tree)
+  - [Repository tree](#Repository-tree)
   - [SVG files](#SVG-files)
   - [JavaScript files](#JavaScript-files)
   - [HTML files](#HTML-files)
   - [CSS files](#CSS-files)
   - [Other files](#Other-files)
 - [Installation](#Installation)
-- [The Sass version](#The-Sass-version)
+- [Adding icons to HTML](#Adding-icons-to-HTML)
+  - [Adding a single icon](#Adding-a-single-icon)
+  - [Adding a list of icons](#Adding-a-list-of-icons)
+  - [Adding text to an icon](#Adding-text-to-an-icon)
+  - [Adding a link on an icon](#Adding-a-link-on-an-icon)
+  - [Changing text alignment](#Changing-text-alignment)
+- [Changing the list alignment](#Changing-the-list-alignment)
+- [Changing the size of the icons](#Changing-the-size-of-the-icons)
+  - [Sass version](#Sass-version)
+  - [CSS version](#CSS-version)
+- [Setting the style of an icon](#Setting-the-style-of-an-icon)
+- [Changing the color of the icons](#Changing-the-color-of-the-icons)
+  - [Automatic for all icons](#Automatic-for-all-icons)
+  - [Per icon color without JavaScript](#Per-icon-color-without-JavaScript)
 
 ### Introduction
 
@@ -118,10 +131,7 @@ I created this small bundle after I discovered a similar aproach for social icon
 │   ├── fasticons.min.css
 │   └── index.html
 ├── documentation assets
-│   ├── fasticons.png
-│   ├── fasticons-styles.png
-│   ├── fasticonslogo.png
-│   └── fasticonslogo-svg
+│   └── ...
 ├── src
 │   ├── assets
 │   │   └── si.svg
@@ -194,7 +204,8 @@ Download all the files and integrate them in your current project:
 If you prefer to use the compiled and minified css (32px icon size), you can use integrate `dist/fasticons.min.css`. The limit of using a compiled file is that you can only change the icon size by changing it manually everywhere. Due to calculation of the sizes, this is virtually impossible.  
 `dist/fasticons.css`is an uncompiled, not minified css only version with css variables to set size, color and spacer.
 
-2. OPTIONAL: **Link** the javascript file just before the `</body>`closing tag and adapt the path to the project situation (eg: `js/`). `<script src="[PATH]fasticons.min.js"></script>`  
+2. OPTIONAL: **Link** the javascript file just before the `</body>`closing tag and adapt the path to the project situation (eg: `js/`). Change `[YOUR PATH]` to the location of the `si.svg` file.  
+`<script src="[YOUR PATH]fasticons.min.js"></script>`  
 OPTIONAL: You can also **copy and paste** this snippet before the `</body>`closing tag:
 
 ``` JavaScript
@@ -210,7 +221,7 @@ fasticons();
 
 4. Use index.html as a reference for creating lists using `flexbox` css or create your own.
 
-### Adding icons to your HTML
+### Adding icons to HTML
 
 #### Adding a single icon
 
@@ -270,7 +281,7 @@ To add text to your icon, include the icon `div` in a `span` tag and add the tex
 </span>
 ```
 
-#### Adding a link on your icon
+#### Adding a link on an icon
 
 To add a link to your icon, include the icon `a` tag around the icon. If there is a `span` tag, remove it.
 
@@ -420,3 +431,56 @@ The default style is Square
 You can set the style per icon in the HTML by adding one of the followng classes:
 
 `is-rounded`, `is-rounded-more`, `is-circle`.
+
+### Changing the color of the icons
+
+#### Automatic for all icons
+
+You can choose to have the colors automatically set to the brand color by using a very small JavaScript.
+
+**Link** the javascript file just before the `</body>`closing tag and adapt the path to the project situation (eg: `js/`). Change `[YOUR PATH]` to the location of the `si.svg` file.  
+`<script src="[PATH]fasticons.min.js"></script>`  
+
+You can also **copy and paste** this snippet before the `</body>`closing tag:
+
+``` JavaScript
+"use strict";
+var fasticons = function() {
+    for (var t = document.querySelectorAll(".icon"), c = 0; c < t.length; c++)
+    t[c].closest(".icon").classList.add(t[c].outerHTML.match(/(?<=#)(.*)(?=")/g))
+};
+fasticons();
+```
+
+Removing or changing the CSS rule for a specific icon gives you control over the color of separate icons.
+
+Example **Sass** version of the stylesheet rule:
+
+``` SCSS
+.reddit {
+  fill: #ff4500;
+}
+```
+
+Example **CSS** version of the stylesheet rule:
+
+```CSS
+.icon-list .icon.reddit {
+  fill: #ff4500;
+}
+```
+
+#### Per icon color without JavaScript
+
+By adding the desired color class to each `icon` tag separately, you can color each icon separately. The class is named after the icon.
+
+``` HTML
+<a href="#">
+  <div class="icon reddit">
+    <svg>
+      <use xlink:href="[YOUR PATH]si.svg#reddit"></use>
+    </svg>
+  </div>
+  Reddit
+</a>
+```

@@ -1,8 +1,9 @@
-/* Settings */
 :root {
+  /* Settings */
   --icon-size: 32px;
   --default-icon-color: gray;
   --spacer: 1rem;
+  /* END Settings */
 }
 
 .icon-list {
@@ -40,6 +41,9 @@
   align-items: center;
   margin-bottom: var(--spacer);
   margin-right: calc(var(--spacer) * 1.5);
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 .icon-list a .icon, .icon-list span .icon {

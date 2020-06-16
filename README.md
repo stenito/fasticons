@@ -48,7 +48,7 @@ The icons are scalable. To keep the scss file small, I opted to size all icons t
 
 There are 4 icon styles available:
 
-- Square
+- Square (default)
 - Rounded
 - Rounded more
 - Circle
@@ -132,7 +132,6 @@ I created this small bundle after I discovered a similar aproach for social icon
 ├── LICENSE
 ├── README.md
 └── repository-tree.txt
-
 ```
 
 #### SVG files
@@ -145,7 +144,6 @@ Size: 8.9kb
 Size: 8.9kb
 
 ``` svg
-
 <svg xmlns="http://www.w3.org/2000/svg"  xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32">
 
   <symbol id="github" viewBox="0 0 32 32">
@@ -155,7 +153,6 @@ Size: 8.9kb
   </symbol>
 
 </svg>
-
 ```
 
 #### JavaScript files
@@ -200,19 +197,203 @@ If you prefer to use the compiled and minified css (32px icon size), you can use
 2. OPTIONAL: **Link** the javascript file just before the `</body>`closing tag and adapt the path to the project situation (eg: `js/`). `<script src="[PATH]fasticons.min.js"></script>`  
 OPTIONAL: You can also **copy and paste** this snippet before the `</body>`closing tag:
 
-```JavaScript
-
+``` JavaScript
 "use strict";
 var fasticons = function() {
     for (var t = document.querySelectorAll(".icon"), c = 0; c < t.length; c++)
     t[c].closest(".icon").classList.add(t[c].outerHTML.match(/(?<=#)(.*)(?=")/g))
 };
 fasticons();
-
 ```
 
 3. Add si.svg to your assets folder. You can customise si.svg to remove any icons you will not use or even add your own! I will [provide detailed specifications for creating additional icons in the nera future](https://github.com/stenito/fasticons/projects/1).
 
 4. Use index.html as a reference for creating lists using `flexbox` css or create your own.
 
-### The Sass version
+### Adding icons to your HTML
+
+#### Adding a single icon
+
+Adding a single icon is as simple as adding a single line of HTML. Change `[YOUR PATH]` to the location of the `si.svg` file.
+
+``` HTML
+<div class="icon">
+  <svg>
+    <use xlink:href="[YOUR PATH]si.svg#reddit"></use>
+  </svg>
+</div>
+
+/* example with assets as path */
+<div class="icon">
+  <svg>
+    <use xlink:href="assets/si.svg#reddit"></use>
+  </svg>
+</div>
+```
+
+#### Adding a list of icons
+
+To add a list of icons, include the icons in that list in `</div class='icon-list'>`.
+
+```HTML
+</div class='icon-list'>
+  <div class="icon">
+    <svg>
+      <use xlink:href="[YOUR PATH]si.svg#reddit"></use>
+    </svg>
+  </div>
+  <div class="icon">
+    <svg>
+      <use xlink:href="[YOUR PATH]si.svg#facebook"></use>
+    </svg>
+  </div>
+  <div class="icon">
+    <svg>
+      <use xlink:href="[YOUR PATH]si.svg#twitter"></use>
+    </svg>
+  </div>
+</div>
+```
+
+#### Adding text to an icon
+
+To add text to your icon, include the icon `div` in a `span` tag and add the text after the icon.
+
+```HTML
+<span>
+  <div class="icon">
+    <svg>
+      <use xlink:href="[YOUR PATH]si.svg#reddit"></use>
+    </svg>
+  </div>
+  This is a Reddit icon
+</span>
+```
+
+#### Adding a link on your icon
+
+To add a link to your icon, include the icon `a` tag around the icon. If there is a `span` tag, remove it.
+
+```HTML
+<a href="#">
+  <div class="icon">
+    <svg>
+      <use xlink:href="[YOUR PATH]si.svg#reddit"></use>
+    </svg>
+  </div>
+  This is a Reddit icon
+</a>
+```
+
+#### Changing text alignment
+
+Changing text position is on a list basis.
+
+Horizontal alignment is default.
+
+To change the text position, add a `has-vertical` class to the `icon-list` `div`.
+
+```HTML
+</div class='icon-list has-vertical'>
+  <div class="icon">
+    <svg>
+      <use xlink:href="[YOUR PATH]si.svg#reddit"></use>
+    </svg>
+  </div>
+  <div class="icon">
+    <svg>
+      <use xlink:href="[YOUR PATH]si.svg#facebook"></use>
+    </svg>
+  </div>
+  <div class="icon">
+    <svg>
+      <use xlink:href="[YOUR PATH]si.svg#twitter"></use>
+    </svg>
+  </div>
+</div>
+```
+
+### Changing the list alignment
+
+List horizontal alignment is default.
+
+To change the list alignment to vertical, add add a `is-vertical` class to the `icon-list` `div`.
+
+```HTML
+</div class='icon-list is-vertical'>
+  <div class="icon">
+    <svg>
+      <use xlink:href="[YOUR PATH]si.svg#reddit"></use>
+    </svg>
+  </div>
+  <div class="icon">
+    <svg>
+      <use xlink:href="[YOUR PATH]si.svg#facebook"></use>
+    </svg>
+  </div>
+  <div class="icon">
+    <svg>
+      <use xlink:href="[YOUR PATH]si.svg#twitter"></use>
+    </svg>
+  </div>
+</div>
+```
+
+### Changing the size of the icons
+
+#### Sass version
+
+`src/fasticons.scss` has 3 variables that you can change to fit your needs. The variables are marked as `!default`so you can change then in a global settings file that is imported before if you wish.
+
+``` SCSS
+// settings
+$icon-size: 32px !default;
+$default-icon-color: gray !default;
+$spacer: 1rem !default;
+```
+
+`$icon-size` takes any valid CSS unit value.
+
+`$default-icon-color` takes any valid CSS color value. Using the JavaScript color automation overrides the default color with a predefined color for all icons. Using a class in the HTML file to define the color can set the color per icon and leave others in the default color. [Learn how to set the color of the icons](#)
+
+`$spacer` sets the spacing used in the HTML to style the icons and icon lists + their surrouding elements.
+
+#### CSS version
+
+`dist/fasticons.css` has 3 variables that you can change to fit your needs.
+
+``` CSS
+:root {
+  /* Settings */
+  --icon-size: 32px;
+  --default-icon-color: gray;
+  --spacer: 1rem;
+  /* END Settings */
+}
+```
+
+`--icon-size` takes any valid CSS unit value.
+
+`--default-icon-color` takes any valid CSS color value. Using the JavaScript color automation overrides the default color with a predefined color for all icons. Using a class in the HTML file to define the color can set the color per icon and leave others in the default color. [Learn how to set the color of the icons](#)
+
+`--spacer` sets the spacing used in the HTML to style the icons and icon lists + their surrouding elements.
+
+### Setting the style of an icon
+
+Setting the style of an icon the same for both Sass and CSS version.
+
+There are 4 icon styles available:
+
+- Square (default)
+- Rounded
+- Rounded more
+- Circle
+
+> This is a screenshot of the icons. The quality of the SVG icons is razorsharp :).
+
+![Available icons styles](https://raw.githubusercontent.com/stenito/fasticons/master/documentation%20assets/fasticons-styles.png)
+
+The default style is Square
+You can set the style per icon in the HTML by adding one of the followng classes:
+
+`is-rounded`, `is-rounded-more`, `is-circle`.

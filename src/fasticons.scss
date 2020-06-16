@@ -1,16 +1,16 @@
 @charset 'utf8';
 
 // settings
-$iconsize: 32px !default;
+$icon-size: 32px !default;
 $default-icon-color: gray !default;
 $spacer: 1rem !default;
 
 @mixin svg-size($wh, $m) {
   svg {
-    width: $iconsize + $iconsize / $wh;
-    height: $iconsize + $iconsize / $wh;
-    margin-left: -$iconsize / $m / 2;
-    margin-top: -$iconsize / $m / 2;
+    width: $icon-size + $icon-size / $wh;
+    height: $icon-size + $icon-size / $wh;
+    margin-left: -$icon-size / $m / 2;
+    margin-top: -$icon-size / $m / 2;
   }
 }
 
@@ -41,13 +41,14 @@ $spacer: 1rem !default;
     align-items: center;
     margin-bottom: $spacer; 
     margin-right: $spacer * 1.5;
+    width: fit-content;
     .icon {
       margin-bottom: 0;
     }
   }
   .icon {
-    width: $iconsize;
-    height: $iconsize;
+    width: $icon-size;
+    height: $icon-size;
     overflow: hidden;
     fill: $default-icon-color;
     margin-right: $spacer / 2;
@@ -56,13 +57,13 @@ $spacer: 1rem !default;
     &.pinterest {
       @include svg-size(4, 4);
     }
-    &.rounded {
-      border-radius: $iconsize / 8;
+    &.is-rounded {
+      border-radius: $icon-size / 8;
       &-more {
-        border-radius: $iconsize / 4;
+        border-radius: $icon-size / 4;
       }
     }
-    &.circle {
+    &.is-circle {
       border-radius: 50%;
       @include svg-size(8.5, 8);
       &.linkedin,

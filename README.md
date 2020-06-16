@@ -1,4 +1,4 @@
-# Fasticons 0.0.2-alpha
+# Fasticons 0.1.0-alpha
 
 ![Fasticons logo](https://raw.githubusercontent.com/stenito/fasticons/master/documentation%20assets/fasticonslogo.svg)
 
@@ -30,7 +30,7 @@ Reddit, Snapchat, Facebook, Twitter, Instagram, Github, Linkedin, Whatsapp, Yout
 
 ### Scalable icons
 
-The icons are scalable. To keep the scss file small, I opted to size all icons to the same size.
+The icons are scalable. To keep the css small, All the icons have the same size.
 
 [Learn how to change the size of the icons](#Changing-the-size-of-the-icons)
 
@@ -45,23 +45,11 @@ There are 4 icon styles available:
 
 [Learn how to change the style of an icon](#Setting-the-style-of-an-icon)
 
-### Horizontal and vertical lists
-
-A set of icons can be styled in a horizontal (default) or vertical list.
-
-[Learn how to display icon lists in different ways](#Changing-the-list-alignment)
-
 ### Automated (or not) Icon colors
 
 The icons can be styled in black, in the default color set in css (`grey`) or in brand identity colors that can be set with a class per icon or automatically for all with JavaScript.
 
 [Learn how to change the color of the icons](#Changing-the-color-of-the-icons)
-
-### With or without link
-
-A tekst or link can be added on the right or below the icon.
-
-[Learn how to add a text with or without link](#Adding-text-to-an-icon)
 
 ### Sass ans plain CSS
 
@@ -81,13 +69,7 @@ Both versions have some settings variables you can adjust.
   - [CSS files](#CSS-files)
   - [Other files](#Other-files)
 - [Installation](#Installation)
-- [Adding icons to HTML](#Adding-icons-to-HTML)
-  - [Adding a single icon](#Adding-a-single-icon)
-  - [Adding a list of icons](#Adding-a-list-of-icons)
-  - [Adding text to an icon](#Adding-text-to-an-icon)
-  - [Adding a link on an icon](#Adding-a-link-on-an-icon)
-  - [Changing text alignment](#Changing-text-alignment)
-- [Changing the list alignment](#Changing-the-list-alignment)
+- [Adding an icon to HTML](#Adding-icons-to-HTML)
 - [Changing the size of the icons](#Changing-the-size-of-the-icons)
   - [Sass version](#Sass-version)
   - [CSS version](#CSS-version)
@@ -157,29 +139,29 @@ Size: 8.9kb
 #### JavaScript files
 
 `src/js/fasticons.js` is a very small ES6 script to automate the use of colored icons.  
-Size: 213b
+Size: 232b
 
 `dist/js/fasticons.min.js` is the compiled and minified script for use in production.  
-Size: 193b
+Size: 212b
 
 #### HTML files
 
 `src/index.html` source example file with some of the available icons, each in 4 versions.  
-Size: 7kb
+Size: 6kb
 
 `dist/index.html` same as source example file but with css and js linking for compiled files.  
-Size: 7kb
+Size: 6kb
 
 #### CSS files
 
 `src/fasticons.scss` is a sass file with the styles for the icons as well as a few rules for the example file.  
-Size: 2kb
+Size: 1kb
 
 `dist/fasticons.min.css` is the compiled and minified scss file.  
-Size: 2kb
+Size: 1kb
 
 `dist/fasticons.css`as a css only version.  
-Size: 3kb
+Size: 2kb
 
 #### Other files
 
@@ -190,8 +172,8 @@ All other files are supporting in some way or another.
 Download all the files and integrate them in your current project:
 
 - Integrate the sass file (`scr/fasticons.scss`) in your development process. You can either copy paste the code to your existing file or use `@import` to keep it separate.  
-If you prefer to use the compiled and minified css (32px icon size), you can use integrate `dist/fasticons.min.css`. The limit of using a compiled file is that you can only change the icon size by changing it manually everywhere. Due to calculation of the sizes, this is virtually impossible.  
-`dist/fasticons.css`is an uncompiled, not minified css only version with css variables to set size, color and spacer.
+If you prefer to use the compiled and minified css (32px icon size), you can use integrate `dist/fasticons.min.css`. The limit of using a compiled file is that you can only change the icon size by changing it manually everywhere. Due to calculation of the sizes, this is a 'nice' job.  
+`dist/fasticons.css`is an uncompiled, not minified css only version with css variables to set size and color
 
 - OPTIONAL: **Link** the javascript file just before the `</body>`closing tag and adapt the path to the project situation (eg: `js/`). Change `[YOUR PATH]` to the location of the `si.svg` file.  
 `<script src="[YOUR PATH]fasticons.min.js"></script>`  
@@ -208,13 +190,9 @@ var fasticons = function() {
 
 - Add si.svg to your assets folder. You can customise si.svg to remove any icons you will not use or even add your own! I will [provide detailed specifications for creating additional icons in the nera future](https://github.com/stenito/fasticons/projects/1).
 
-- Use index.html as a reference for creating lists using `flexbox` css or create your own.
+### Adding an icon to HTML
 
-### Adding icons to HTML
-
-#### Adding a single icon
-
-Adding a single icon is as simple as adding a single line of HTML. Change `[YOUR PATH]` to the location of the `si.svg` file.
+Adding an icon is as simple as adding a single line of HTML. Change `[YOUR PATH]` to the location of the `si.svg` file.
 
 ``` HTML
 <div class="icon">
@@ -231,138 +209,6 @@ Adding a single icon is as simple as adding a single line of HTML. Change `[YOUR
 </div>
 ```
 
-#### Adding a list of icons
-
-To add a list of icons, include the icons in that list in `</div class='icon-list'>`.
-
-```HTML
-</div class='icon-list'>
-  <div class="icon">
-    <svg>
-      <use xlink:href="[YOUR PATH]si.svg#reddit"></use>
-    </svg>
-  </div>
-  <div class="icon">
-    <svg>
-      <use xlink:href="[YOUR PATH]si.svg#facebook"></use>
-    </svg>
-  </div>
-  <div class="icon">
-    <svg>
-      <use xlink:href="[YOUR PATH]si.svg#twitter"></use>
-    </svg>
-  </div>
-</div>
-```
-
-#### Adding text to an icon
-
-To add text to your icon, include the icon `div` in a `span` tag and add the text after the icon.
-
-```HTML
-<span>
-  <div class="icon">
-    <svg>
-      <use xlink:href="[YOUR PATH]si.svg#reddit"></use>
-    </svg>
-  </div>
-  This is a Reddit icon
-</span>
-```
-
-#### Adding a link on an icon
-
-To add a link to your icon, include the icon `a` tag around the icon. If there is a `span` tag, remove it.
-
-```HTML
-<a href="#">
-  <div class="icon">
-    <svg>
-      <use xlink:href="[YOUR PATH]si.svg#reddit"></use>
-    </svg>
-  </div>
-  This is a Reddit icon
-</a>
-```
-
-#### Changing text alignment
-
-> NOTICE: Currently: changing text position is on a list basis. All icons in a list are changed.
-
-Horizontal alignment is default.
-
-To change the text position, add a `has-aligned-center` class to the `icon-list` `div`.
-
-```HTML
-<div class='icon-list has-aligned-center'>
-  <div class="icon">
-    <svg>
-      <use xlink:href="[YOUR PATH]si.svg#reddit"></use>
-    </svg>
-  </div>
-  <div class="icon">
-    <svg>
-      <use xlink:href="[YOUR PATH]si.svg#facebook"></use>
-    </svg>
-  </div>
-  <div class="icon">
-    <svg>
-      <use xlink:href="[YOUR PATH]si.svg#twitter"></use>
-    </svg>
-  </div>
-</div>
-```
-
----
-
-![Horizontal text](https://raw.githubusercontent.com/stenito/fasticons/master/documentation%20assets/hh.png)  
-Text next to the icon (default)
-
----
-
-![Vertical aligned text](https://raw.githubusercontent.com/stenito/fasticons/master/documentation%20assets/hc.png)  
-Text under the icon (`has-aligned-vertical`)
-
----
-
-### Changing the list alignment
-
-List horizontal alignment is default.
-
-To change the list alignment to vertical, add add a `is-vertical` class to the `icon-list` `div`.
-
-```HTML
-<div class='icon-list is-vertical'>
-  <div class="icon">
-    <svg>
-      <use xlink:href="[YOUR PATH]si.svg#reddit"></use>
-    </svg>
-  </div>
-  <div class="icon">
-    <svg>
-      <use xlink:href="[YOUR PATH]si.svg#facebook"></use>
-    </svg>
-  </div>
-  <div class="icon">
-    <svg>
-      <use xlink:href="[YOUR PATH]si.svg#twitter"></use>
-    </svg>
-  </div>
-</div>
-```
-
----
-
-![Horizontal list](https://raw.githubusercontent.com/stenito/fasticons/master/documentation%20assets/hh.png)  
-Horizontal list (default)
-
----
-
-![Vertical list](https://raw.githubusercontent.com/stenito/fasticons/master/documentation%20assets/vh.png)  
-Vertical list (`has-aligned-vertical`)
-
----
-
 ### Changing the size of the icons
 
 #### Sass version
@@ -373,14 +219,11 @@ Vertical list (`has-aligned-vertical`)
 // settings
 $icon-size: 32px !default;
 $default-icon-color: gray !default;
-$spacer: 1rem !default;
 ```
 
 `$icon-size` takes any valid CSS unit value.
 
-`$default-icon-color` takes any valid CSS color value. Using the JavaScript color automation overrides the default color with a predefined color for all icons. Using a class in the HTML file to define the color can set the color per icon and leave others in the default color. [Learn how to set the color of the icons](#Changing-the-color-of-the-icons)
-
-`$spacer` sets the spacing used in the HTML to style the icons and icon lists + their surrouding elements.
+`$default-icon-color` takes any valid CSS color value. Using the JavaScript color automation overrides the default color with a predefined color for all icons. Using a class in the HTML file to define the color can set the color per icon and leaves others in the default color. [Learn how to set the color of the icons](#Changing-the-color-of-the-icons)
 
 #### CSS version
 
@@ -391,7 +234,6 @@ $spacer: 1rem !default;
   /* Settings */
   --icon-size: 32px;
   --default-icon-color: gray;
-  --spacer: 1rem;
   /* END Settings */
 }
 ```
@@ -399,8 +241,6 @@ $spacer: 1rem !default;
 `--icon-size` takes any valid CSS unit value.
 
 `--default-icon-color` takes any valid CSS color value. Using the JavaScript color automation overrides the default color with a predefined color for all icons. Using a class in the HTML file to define the color can set the color per icon and leave others in the default color. [Learn how to set the color of the icons](#Changing-the-color-of-the-icons)
-
-`--spacer` sets the spacing used in the HTML to style the icons and icon lists + their surrouding elements.
 
 ### Setting the style of an icon
 
@@ -465,12 +305,9 @@ Example **CSS** version of the stylesheet rule:
 By adding the desired color class to each `icon` tag separately, you can color each icon separately. The class is named after the icon.
 
 ``` HTML
-<a href="#">
-  <div class="icon reddit">
-    <svg>
-      <use xlink:href="[YOUR PATH]si.svg#reddit"></use>
-    </svg>
-  </div>
-  Reddit
-</a>
+<div class="icon reddit">
+  <svg>
+    <use xlink:href="[YOUR PATH]si.svg#reddit"></use>
+  </svg>
+</div>
 ```

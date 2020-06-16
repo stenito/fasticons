@@ -16,7 +16,7 @@ Please post [feature requests here](https://github.com/stenito/fasticons/labels/
 
 I will add new icons as i need them or when requested. [Request new or additional icons here](https://github.com/stenito/fasticons/labels/new%20icon%20request).
 
-> This is a screenshot of the icons. The quality of the SVG icons is razorsharp :).
+> This is a screenshot of the icons. The quality of the SVG icons is razorsharp :). See... --> ![Github icon](https://raw.githubusercontent.com/stenito/fasticons/master/documentation%20assets/github.svg)
 
 ![Available icons](https://raw.githubusercontent.com/stenito/fasticons/master/documentation%20assets/fasticons.png)
 

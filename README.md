@@ -289,12 +289,6 @@ To add a link to your icon, include the icon `a` tag around the icon. If there i
 
 > NOTICE: Currently: changing text position is on a list basis. All icons in a list are changed.
 
-![Horizontal text](https://raw.githubusercontent.com/stenito/fasticons/master/documentation%20assets/hh.png)  
-Text next to the icon (default)
-
-![Vertical aligned text](https://raw.githubusercontent.com/stenito/fasticons/master/documentation%20assets/vh.png)  
-Text under the icon (`has-aligned-vertical`)
-
 Horizontal alignment is default.
 
 To change the text position, add a `has-aligned-center` class to the `icon-list` `div`.
@@ -318,6 +312,18 @@ To change the text position, add a `has-aligned-center` class to the `icon-list`
   </div>
 </div>
 ```
+
+---
+
+![Horizontal text](https://raw.githubusercontent.com/stenito/fasticons/master/documentation%20assets/hh.png)  
+Text next to the icon (default)
+
+---
+
+![Vertical aligned text](https://raw.githubusercontent.com/stenito/fasticons/master/documentation%20assets/vh.png)  
+Text under the icon (`has-aligned-vertical`)
+
+---
 
 ### Changing the list alignment
 
@@ -344,6 +350,17 @@ To change the list alignment to vertical, add add a `is-vertical` class to the `
   </div>
 </div>
 ```
+---
+
+![Horizontal list](https://raw.githubusercontent.com/stenito/fasticons/master/documentation%20assets/vh.png)  
+Horizontal list (default)
+
+---
+
+![Vertical list](https://raw.githubusercontent.com/stenito/fasticons/master/documentation%20assets/vc.png)  
+Vertical list (`has-aligned-vertical`)
+
+---
 
 ### Changing the size of the icons
 

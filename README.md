@@ -294,7 +294,7 @@ Horizontal alignment is default.
 To change the text position, add a `has-vertical` class to the `icon-list` `div`.
 
 ```HTML
-</div class='icon-list has-vertical'>
+<div class='icon-list has-vertical'>
   <div class="icon">
     <svg>
       <use xlink:href="[YOUR PATH]si.svg#reddit"></use>
@@ -320,7 +320,7 @@ List horizontal alignment is default.
 To change the list alignment to vertical, add add a `is-vertical` class to the `icon-list` `div`.
 
 ```HTML
-</div class='icon-list is-vertical'>
+<div class='icon-list is-vertical'>
   <div class="icon">
     <svg>
       <use xlink:href="[YOUR PATH]si.svg#reddit"></use>

@@ -21,8 +21,15 @@ $spacer: 1rem !default;
     a {
       margin-right: 0;
     }
+    &.has-aligned-center {
+      width: fit-content;
+      align-items: center;
+      span {
+        margin-right: 0;
+      }
+    }
   }
-  &.has-vertical {
+  &.has-aligned-center {
     align-items: flex-start;
     .icon {
       margin-right: 0;

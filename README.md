@@ -287,14 +287,17 @@ To add a link to your icon, include the icon `a` tag around the icon. If there i
 
 #### Changing text alignment
 
-Changing text position is on a list basis.
+> NOTICE: Currently: changing text position is on a list basis. All icons in a list are changed.
+
+![Horizontal text](https://raw.githubusercontent.com/stenito/fasticons/master/documentation%20assets/hh.png)  
+Text next to the icon (default)
 
 Horizontal alignment is default.
 
-To change the text position, add a `has-vertical` class to the `icon-list` `div`.
+To change the text position, add a `has-aligned-center` class to the `icon-list` `div`.
 
 ```HTML
-<div class='icon-list has-vertical'>
+<div class='icon-list has-aligned-center'>
   <div class="icon">
     <svg>
       <use xlink:href="[YOUR PATH]si.svg#reddit"></use>

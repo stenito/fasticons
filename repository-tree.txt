@@ -1,0 +1,23 @@
+# dist
+## assets
+### si.svg
+## js
+### fasticons.min.js
+## fasticons.css
+## fasticons.min.css
+## index.html
+# documentation assets
+## fasticons.png
+## fasticons-styles.png
+## fasticonslogo.png
+## fasticonslogo-svg
+# src
+## assets
+### si.svg
+## js
+### fasticons.js
+## fasticons.scss
+## index.html
+# LICENSE
+# README.md
+# repository-tree.txt

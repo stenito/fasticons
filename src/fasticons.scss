@@ -23,7 +23,7 @@ $spacer: 1rem !default;
     }
   }
   &.has-vertical {
-    align-items: center;
+    align-items: flex-start;
     .icon {
       margin-right: 0;
     }
@@ -39,7 +39,7 @@ $spacer: 1rem !default;
   a, span {
     display: flex;
     align-items: center;
-    margin-bottom: $spacer;
+    margin-bottom: $spacer; 
     margin-right: $spacer * 1.5;
     .icon {
       margin-bottom: 0;

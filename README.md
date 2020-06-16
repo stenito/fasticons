@@ -1,4 +1,4 @@
-# Fasticons 0.0.1-alpha
+# Fasticons 0.0.2-alpha
 
 ![Fasticons logo](https://raw.githubusercontent.com/stenito/fasticons/master/doc%20assets/fasticonslogo.svg)
 
@@ -9,6 +9,8 @@ It uses one svg file to hold the icons as symbols.
 If you find an [issue](https://github.com/stenito/fasticons/issues) with something or have a [question](https://github.com/stenito/fasticons/labels/question), please do not hesitate to [post it here](https://github.com/stenito/fasticons/issues).
 
 Please post [feature requests here](https://github.com/stenito/fasticons/labels/enhancement). Check if your request is already listed before.
+
+---
 
 ## Available icons
 
@@ -32,6 +34,8 @@ I will add new icons as i need them or when requested. [Request new or additiona
 
 [Request new or additional icons here](https://github.com/stenito/fasticons/labels/new%20icon%20request).
 
+---
+
 ## Features
 
 ### Scalable icons
@@ -51,7 +55,7 @@ There are 4 icon styles available:
 
 [Learn how to change the style of an icon]()
 
-### Icon colors
+### Automated (or not) Icon colors
 
 The icons can be styled in black, in the default color set in css (`grey`) or in brand identity colors that can be set with a class per icon or automatically with JavaScript.
 
@@ -69,36 +73,76 @@ A tekst or link can be added on the right or below the icon.
 
 [Learn how to add a tewt with or without link]()
 
+### Sass ans plain CSS
+
+Both versions have some settings variables you can adjust.
+
+---
+
 ## Usage
+
+[Introduction](#Introduction)
+[Dev languages](#Dev-languages)
+[Files](#Files)
+  [Repository tree](#Repositor-tree)
+  [SVG files](#SVG-files)
+  [JavaScript files](#JavaScript-files)
+  [HTML files](#HTML-files)
+  [CSS files](#CSS-files)
+  [Other files](#Other-files)
+[Installation](#Installation)
+[The Sass version](#The-Sass-version)
 
 ### Introduction
 
 I created this small bundle after I discovered a similar aproach for social icons on the basic pages Jekyll installs. As the functionality and flexibility is limited, I decided to do a little more research and testing to see if i could make the system more flexible.
 
-#### Fasticons uses the following languages
+### Dev languages
 
 - HTML
 - Sass (CSS extension language & preprocessor)
 - JavaScript (Optional use)
 
-#### Files in the repository
+### Files
+
+#### Repository tree
 
 ``` plaintext
 .
+├── dist
+│   ├── assets
+│   │   └── si.svg
+│   ├── js
+│   │   └── fasticons.min.js
+│   ├── fasticons.css
+│   ├── fasticons.min.css
+│   └── index.html
+├── documentation assets
+│   ├── fasticons.png
+│   ├── fasticons-styles.png
+│   ├── fasticonslogo.png
+│   └── fasticonslogo-svg
 ├── src
 │   ├── assets
 │   │   └── si.svg
 │   ├── js
 │   │   └── fasticons.js
-│   ├── index.html
-│   └── style.scss
+│   ├── fasticons.scss
+│   └── index.html
 ├── LICENSE
-└── README.md
+├── README.md
+└── repository-tree.txt
 
 ```
 
+#### SVG files
+
 ---
-`assets/si.svg` currently holds 11 available icons. See [Usage](#).
+`src/assets/si.svg` currently holds 11 available icons. See [Usage](#).  
+Size: 8.9kb
+
+`dist/assets/si.svg`is the minified version. Both versions are optimised.  
+Size: 8.9kb
 
 ``` svg
 
@@ -112,42 +156,49 @@ I created this small bundle after I discovered a similar aproach for social icon
 
 </svg>
 
-````
+```
 
-Size: 8.9kb
+#### JavaScript files
 
----
-`js/fasticons.js` is a very small script to automate the use of colored icons. See [Usage](#Installation).
+`src/js/fasticons.js` is a very small ES6 script to automate the use of colored icons. See [Usage](#Installation).  
+Size: 213b
 
-Size: 471b
+`dist/js/fasticons.min.js` is the compiled and minified script for use in production. See [Usage](#Installation).  
+Size: 193b
 
----
+#### HTML files
 
-`index.html` is an example file with the available icons, each in 4 versions. See [Usage](#).
-
+`src/index.html` source example file with some of the available icons, each in 4 versions. See [Usage](#).  
 Size: 7kb
 
----
+`dist/index.html` same as source example file but with css and js linking for compiled files. See [Usage](#).  
+Size: 7kb
 
-`style.scss` is a sass file with the styles for the icons as well as a few rules for the example file. See [Usage](#).
+#### CSS files
 
-Size: 2.1kb
+`src/fasticons.scss` is a sass file with the styles for the icons as well as a few rules for the example file. See [Usage](#).  
+Size: 2kb
 
----
+`dist/fasticons.min.css` is the compiled and minified scss file. See [Usage](#).  
+Size: 2kb
+
+`dist/fasticons.css`as a css only version. See [Usage](#).  
+Size: 3kb
+
+#### Other files
+
+All other files are supporting in some way or another.
 
 ### Installation
 
 Download all the files and integrate them in your current project:
 
-1. Integrate the style file (`style.scss`) in your development process. You can either copy paste the code to your existing file or use `@import` to keep it separate.  
-If you prefer to use the compiled and/or minified css, you can use [this online tool (Sassmeister.com)](https://www.sassmeister.com/) to change the size, color and spacer variables and compile the code to CSS.
+1. Integrate the sass file (`scr/fasticons.scss`) in your development process. You can either copy paste the code to your existing file or use `@import` to keep it separate.  
+If you prefer to use the compiled and minified css (32px icon size), you can use integrate `dist/fasticons.min.css`. The limit of using a compiled file is that you can only change the icon size by changing it manually everywhere. Due to calculation of the sizes, this is virtually impossible.  
+`dist/fasticons.css`is an uncompiled, not minified css only version with css variables to set size, color and spacer.
 
-> **IMPORTANT NOTICE:** I plan to [include a compiled and minified css file in the near future](https://github.com/stenito/fasticons/projects/1). The limits of using a compiled file is that you can only change the icon size by changing it manually everywhere it is used. Due to calculation of the sizes, this is virtually impossible. Another option is to include a css version that uses css variables. Let me know if you would like that by [requesting it as an enhancement](https://github.com/stenito/fasticons/labels/enhancement).
-
-2. OPTIONAL: **Include** the javascript file just before the `</body>`closing tag.  
+2. OPTIONAL: **Link** the javascript file just before the `</body>`closing tag and adapt the path to the project situation (eg: `js/`). `<script src="[PATH]fasticons.min.js"></script>`  
 OPTIONAL: You can also **copy and paste** this snippet before the `</body>`closing tag:
-
-> **IMPORTANT NOTICE:** The JavaScript snippet below is compiled to work cross browser. The original script in the bundle is NOT COMPILED and supports ES6. I plan to [include a compiled and minified script in the near future](https://github.com/stenito/fasticons/projects/1).
 
 ```JavaScript
 
@@ -162,4 +213,6 @@ fasticons();
 
 3. Add si.svg to your assets folder. You can customise si.svg to remove any icons you will not use or even add your own! I will [provide detailed specifications for creating additional icons in the nera future](https://github.com/stenito/fasticons/projects/1).
 
-1. ...
+4. Use index.html as a reference for creating lists using `flexbox` css or create your own.
+
+### The Sass version

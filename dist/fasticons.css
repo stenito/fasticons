@@ -2,152 +2,107 @@
   /* Settings */
   --icon-size: 32px;
   --default-icon-color: gray;
-  --spacer: 1rem;
   /* END Settings */
 }
 
-.icon-list {
-  display: flex;
-}
-
-.icon-list.is-vertical {
-  flex-direction: column;
-}
-
-.icon-list.is-vertical a {
-  margin-right: 0;
-}
-
-.icon-list.has-vertical {
-  align-items: flex-start;
-}
-
-.icon-list.has-vertical .icon {
-  margin-right: 0;
-}
-
-.icon-list.has-vertical a, .icon-list.has-vertical span {
-  flex-direction: column;
-  align-items: center;
-}
-
-.icon-list.has-vertical a .icon, .icon-list.has-vertical span .icon {
-  margin-right: 0;
-  margin-bottom: calc(var(--spacer) / 4);
-}
-
-.icon-list a, .icon-list span {
-  display: flex;
-  align-items: center;
-  margin-bottom: var(--spacer);
-  margin-right: calc(var(--spacer) * 1.5);
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-}
-
-.icon-list a .icon, .icon-list span .icon {
-  margin-bottom: 0;
-}
-
-.icon-list .icon {
-  min-width: var(--icon-size);
-  max-width: var(--icon-size);
-  min-height: var(--icon-size);
-  max-height: var(--icon-size);
+.icon {
+  display: inline-block;
+  min-width: 32px;
+  max-width: 32px;
+  min-height: 32px;
+  max-height: 32px;
   overflow: hidden;
   fill: var(--default-icon-color);
-  margin-right: calc(var(--icon-size) / 2);
-  margin-bottom: var(--spacer);
 }
 
-.icon-list .icon svg {
+.icon svg {
   width: calc(var(--icon-size) + var(--icon-size) / 6);
   height: calc(var(--icon-size) + var(--icon-size) / 6);
   margin-left: calc(0px - (var(--icon-size)) / 6 / 2);
   margin-top: calc(0px - (var(--icon-size)) / 6 / 2);
 }
 
-.icon-list .icon.pinterest svg {
+.icon.pinterest svg {
   width: calc(var(--icon-size) + var(--icon-size) / 4);
   height: calc(var(--icon-size) + var(--icon-size) / 4);
   margin-left: calc(0px - var(--icon-size) / 4 / 2);
   margin-top: calc(0px - var(--icon-size) / 4 / 2);
 }
 
-.icon-list .icon.rounded {
-  border-radius: calc(var(--icon-size) / 8);
+.icon.is-rounded {
+  border-radius: 4px;
 }
 
-.icon-list .icon.rounded-more {
-  border-radius: calc(var(--icon-size) / 4);
+.icon.is-rounded-more {
+  border-radius: 8px;
 }
 
-.icon-list .icon.circle {
+.icon.is-circle {
   border-radius: 50%;
 }
 
-.icon-list .icon.circle svg {
+.icon.is-circle svg {
   width: calc(var(--icon-size) + var(--icon-size) / 8.5);
   height: calc(var(--icon-size) + var(--icon-size) / 8.5);
   margin-left: calc(0px - var(--icon-size) / 8 / 2);
   margin-top: calc(0px - var(--icon-size) / 8 / 2);
 }
 
-.icon-list .icon.circle.linkedin svg, .icon-list .icon.circle.youtube svg {
+.icon.is-circle.linkedin svg,
+.icon.is-circle.youtube svg {
   width: calc(var(--icon-size) + var(--icon-size) / 12);
   height: calc(var(--icon-size) + var(--icon-size) / 12);
   margin-left: calc(0px - var(--icon-size) / 12 / 2);
   margin-top: calc(0px - var(--icon-size) / 12 / 2);
 }
 
-.icon-list .icon.circle.pinterest svg {
+.icon.is-circle.pinterest svg {
   width: calc(var(--icon-size) + var(--icon-size) / 4);
   height: calc(var(--icon-size) + var(--icon-size) / 4);
   margin-left: calc(0px - var(--icon-size) / 4 / 2);
   margin-top: calc(0px - var(--icon-size) / 4 / 2);
 }
 
-.icon-list .icon.reddit {
+.icon.reddit {
   fill: #ff4500;
 }
 
-.icon-list .icon.snapchat {
-  fill: #000000;
+.icon.snapchat {
+  fill: #000;
 }
 
-.icon-list .icon.facebook {
+.icon.facebook {
   fill: #4267b2;
 }
 
-.icon-list .icon.twitter {
+.icon.twitter {
   fill: #1da1f2;
 }
 
-.icon-list .icon.instagram {
+.icon.instagram {
   fill: #f00074;
 }
 
-.icon-list .icon.github {
+.icon.github {
   fill: #231f20;
 }
 
-.icon-list .icon.linkedin {
+.icon.linkedin {
   fill: #2867b2;
 }
 
-.icon-list .icon.whatsapp {
+.icon.whatsapp {
   fill: #4ac959;
 }
 
-.icon-list .icon.vimeo {
+.icon.vimeo {
   fill: #1ab7ea;
 }
 
-.icon-list .icon.youtube {
-  fill: #ff0000;
+.icon.youtube {
+  fill: red;
 }
 
-.icon-list .icon.pinterest {
+.icon.pinterest {
   fill: #e60023;
 }

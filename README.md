@@ -81,17 +81,17 @@ Both versions have some settings variables you can adjust.
 
 ## Usage
 
-[Introduction](#Introduction)
-[Dev languages](#Dev-languages)
-[Files](#Files)
-  [Repository tree](#Repositor-tree)
-  [SVG files](#SVG-files)
-  [JavaScript files](#JavaScript-files)
-  [HTML files](#HTML-files)
-  [CSS files](#CSS-files)
-  [Other files](#Other-files)
-[Installation](#Installation)
-[The Sass version](#The-Sass-version)
+[Introduction](#Introduction)  
+[Dev languages](#Dev-languages)  
+[Files](#Files)  
+  [Repository tree](#Repositor-tree)  
+  [SVG files](#SVG-files)  
+  [JavaScript files](#JavaScript-files)  
+  [HTML files](#HTML-files)  
+  [CSS files](#CSS-files)  
+  [Other files](#Other-files)  
+[Installation](#Installation)  
+[The Sass version](#The-Sass-version)  
 
 ### Introduction
 

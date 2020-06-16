@@ -1,6 +1,6 @@
 # Fasticons 0.0.2-alpha
 
-![Fasticons logo](https://raw.githubusercontent.com/stenito/fasticons/master/doc%20assets/fasticonslogo.svg)
+![Fasticons logo](https://raw.githubusercontent.com/stenito/fasticons/master/documentation%20assets/fasticonslogo.svg)
 
 Fasticons is a small bundle to add social and other icons faster and easier to your website.
 
@@ -18,7 +18,7 @@ I will add new icons as i need them or when requested. [Request new or additiona
 
 > This is a screenshot of the icons. The quality of the SVG icons is razorsharp :).
 
-![Available icons](https://raw.githubusercontent.com/stenito/fasticons/master/doc%20assets/fasticons.png)
+![Available icons](https://raw.githubusercontent.com/stenito/fasticons/master/documentation%20assets/fasticons.png)
 
 - Facebook
 - Instagram

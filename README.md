@@ -136,7 +136,7 @@ I created this small bundle after I discovered a similar aproach for social icon
 
 #### SVG files
 
-`src/assets/si.svg` currently holds 11 available icons. See [Usage](#).  
+`src/assets/si.svg` currently holds 11 available icons.  
 Size: 8.9kb
 
 `dist/assets/si.svg`is the minified version. Both versions are optimised.  
@@ -156,29 +156,29 @@ Size: 8.9kb
 
 #### JavaScript files
 
-`src/js/fasticons.js` is a very small ES6 script to automate the use of colored icons. See [Usage](#Installation).  
+`src/js/fasticons.js` is a very small ES6 script to automate the use of colored icons.  
 Size: 213b
 
-`dist/js/fasticons.min.js` is the compiled and minified script for use in production. See [Usage](#Installation).  
+`dist/js/fasticons.min.js` is the compiled and minified script for use in production.  
 Size: 193b
 
 #### HTML files
 
-`src/index.html` source example file with some of the available icons, each in 4 versions. See [Usage](#).  
+`src/index.html` source example file with some of the available icons, each in 4 versions.  
 Size: 7kb
 
-`dist/index.html` same as source example file but with css and js linking for compiled files. See [Usage](#).  
+`dist/index.html` same as source example file but with css and js linking for compiled files.  
 Size: 7kb
 
 #### CSS files
 
-`src/fasticons.scss` is a sass file with the styles for the icons as well as a few rules for the example file. See [Usage](#).  
+`src/fasticons.scss` is a sass file with the styles for the icons as well as a few rules for the example file.  
 Size: 2kb
 
-`dist/fasticons.min.css` is the compiled and minified scss file. See [Usage](#).  
+`dist/fasticons.min.css` is the compiled and minified scss file.  
 Size: 2kb
 
-`dist/fasticons.css`as a css only version. See [Usage](#).  
+`dist/fasticons.css`as a css only version.  
 Size: 3kb
 
 #### Other files
@@ -189,11 +189,11 @@ All other files are supporting in some way or another.
 
 Download all the files and integrate them in your current project:
 
-1. Integrate the sass file (`scr/fasticons.scss`) in your development process. You can either copy paste the code to your existing file or use `@import` to keep it separate.  
+- Integrate the sass file (`scr/fasticons.scss`) in your development process. You can either copy paste the code to your existing file or use `@import` to keep it separate.  
 If you prefer to use the compiled and minified css (32px icon size), you can use integrate `dist/fasticons.min.css`. The limit of using a compiled file is that you can only change the icon size by changing it manually everywhere. Due to calculation of the sizes, this is virtually impossible.  
 `dist/fasticons.css`is an uncompiled, not minified css only version with css variables to set size, color and spacer.
 
-2. OPTIONAL: **Link** the javascript file just before the `</body>`closing tag and adapt the path to the project situation (eg: `js/`). Change `[YOUR PATH]` to the location of the `si.svg` file.  
+- OPTIONAL: **Link** the javascript file just before the `</body>`closing tag and adapt the path to the project situation (eg: `js/`). Change `[YOUR PATH]` to the location of the `si.svg` file.  
 `<script src="[YOUR PATH]fasticons.min.js"></script>`  
 OPTIONAL: You can also **copy and paste** this snippet before the `</body>`closing tag:
 
@@ -206,9 +206,9 @@ var fasticons = function() {
 fasticons();
 ```
 
-3. Add si.svg to your assets folder. You can customise si.svg to remove any icons you will not use or even add your own! I will [provide detailed specifications for creating additional icons in the nera future](https://github.com/stenito/fasticons/projects/1).
+- Add si.svg to your assets folder. You can customise si.svg to remove any icons you will not use or even add your own! I will [provide detailed specifications for creating additional icons in the nera future](https://github.com/stenito/fasticons/projects/1).
 
-4. Use index.html as a reference for creating lists using `flexbox` css or create your own.
+- Use index.html as a reference for creating lists using `flexbox` css or create your own.
 
 ### Adding icons to HTML
 
@@ -350,6 +350,7 @@ To change the list alignment to vertical, add add a `is-vertical` class to the `
   </div>
 </div>
 ```
+
 ---
 
 ![Horizontal list](https://raw.githubusercontent.com/stenito/fasticons/master/documentation%20assets/hh.png)  
@@ -377,7 +378,7 @@ $spacer: 1rem !default;
 
 `$icon-size` takes any valid CSS unit value.
 
-`$default-icon-color` takes any valid CSS color value. Using the JavaScript color automation overrides the default color with a predefined color for all icons. Using a class in the HTML file to define the color can set the color per icon and leave others in the default color. [Learn how to set the color of the icons](#)
+`$default-icon-color` takes any valid CSS color value. Using the JavaScript color automation overrides the default color with a predefined color for all icons. Using a class in the HTML file to define the color can set the color per icon and leave others in the default color. [Learn how to set the color of the icons](#Changing-the-color-of-the-icons)
 
 `$spacer` sets the spacing used in the HTML to style the icons and icon lists + their surrouding elements.
 
@@ -397,7 +398,7 @@ $spacer: 1rem !default;
 
 `--icon-size` takes any valid CSS unit value.
 
-`--default-icon-color` takes any valid CSS color value. Using the JavaScript color automation overrides the default color with a predefined color for all icons. Using a class in the HTML file to define the color can set the color per icon and leave others in the default color. [Learn how to set the color of the icons](#)
+`--default-icon-color` takes any valid CSS color value. Using the JavaScript color automation overrides the default color with a predefined color for all icons. Using a class in the HTML file to define the color can set the color per icon and leave others in the default color. [Learn how to set the color of the icons](#Changing-the-color-of-the-icons)
 
 `--spacer` sets the spacing used in the HTML to style the icons and icon lists + their surrouding elements.
 

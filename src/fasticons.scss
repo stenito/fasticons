@@ -54,8 +54,10 @@ $spacer: 1rem !default;
     }
   }
   .icon {
-    width: $icon-size;
-    height: $icon-size;
+    min-width: $icon-size;
+    max-width: $icon-size;
+    min-height: $icon-size;
+    max-height: $icon-size;
     overflow: hidden;
     fill: $default-icon-color;
     margin-right: $spacer / 2;

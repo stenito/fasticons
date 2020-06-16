@@ -8,7 +8,7 @@ It uses one svg file to hold the icons as symbols.
 
 If you find an [issue](https://github.com/stenito/fasticons/issues) with something or have a [question](https://github.com/stenito/fasticons/labels/question), please do not hesitate to [post it here](https://github.com/stenito/fasticons/issues).
 
-Please post [feature requests here](https://github.com/stenito/fasticons/labels/enhancement). Check if your request is already listed before.
+Please post [feature requests here](https://github.com/stenito/fasticons/labels/enhancement). Check if your request has already been posted before.
 
 ---
 

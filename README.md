@@ -330,7 +330,7 @@ Text next to the icon (default)
 
 ---
 
-![Vertical aligned text](https://raw.githubusercontent.com/stenito/fasticons/master/documentation%20assets/vh.png)  
+![Vertical aligned text](https://raw.githubusercontent.com/stenito/fasticons/master/documentation%20assets/hc.png)  
 Text under the icon (`has-aligned-vertical`)
 
 ---

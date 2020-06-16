@@ -20,17 +20,7 @@ I will add new icons as i need them or when requested. [Request new or additiona
 
 ![Available icons](https://raw.githubusercontent.com/stenito/fasticons/master/documentation%20assets/fasticons.png)
 
-- Facebook
-- Instagram
-- Github
-- Whatsapp
-- Youtube
-- Vimeo
-- Reddit
-- Snapchat
-- Twitter
-- Pinterest
-- Linkedin
+Reddit, Snapchat, Facebook, Twitter, Instagram, Github, Linkedin, Whatsapp, Youtube, Vimeo, Pinterest
 
 [Request new or additional icons here](https://github.com/stenito/fasticons/labels/new%20icon%20request).
 

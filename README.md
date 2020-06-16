@@ -146,7 +146,6 @@ I created this small bundle after I discovered a similar aproach for social icon
 
 #### SVG files
 
----
 `src/assets/si.svg` currently holds 11 available icons. See [Usage](#).  
 Size: 8.9kb
 

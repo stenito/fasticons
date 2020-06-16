@@ -200,10 +200,10 @@ OPTIONAL: You can also **copy and paste** this snippet before the `</body>`closi
 ``` JavaScript
 "use strict";
 var fasticons = function() {
-    for (var t = document.querySelectorAll(".icon"), c = 0; c < t.length; c++)
-    t[c].closest(".icon").classList.add(t[c].outerHTML.match(/(?<=#)(.*)(?=")/g))
-};
-fasticons();
+    for (var t = document.querySelectorAll(".icon"), s = 0; s < t.length; s++)
+    t[s].closest(".icon").classList.add(t[s].outerHTML.match(/#(.*)(?=")/g)
+    .toString().substring(1))
+}; fasticons();
 ```
 
 - Add si.svg to your assets folder. You can customise si.svg to remove any icons you will not use or even add your own! I will [provide detailed specifications for creating additional icons in the nera future](https://github.com/stenito/fasticons/projects/1).

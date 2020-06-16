@@ -7,10 +7,7 @@
 ## fasticons.min.css
 ## index.html
 # documentation assets
-## fasticons.png
-## fasticons-styles.png
-## fasticonslogo.png
-## fasticonslogo-svg
+## ...
 # src
 ## assets
 ### si.svg

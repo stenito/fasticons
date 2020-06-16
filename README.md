@@ -352,12 +352,12 @@ To change the list alignment to vertical, add add a `is-vertical` class to the `
 ```
 ---
 
-![Horizontal list](https://raw.githubusercontent.com/stenito/fasticons/master/documentation%20assets/vh.png)  
+![Horizontal list](https://raw.githubusercontent.com/stenito/fasticons/master/documentation%20assets/hh.png)  
 Horizontal list (default)
 
 ---
 
-![Vertical list](https://raw.githubusercontent.com/stenito/fasticons/master/documentation%20assets/vc.png)  
+![Vertical list](https://raw.githubusercontent.com/stenito/fasticons/master/documentation%20assets/vh.png)  
 Vertical list (`has-aligned-vertical`)
 
 ---

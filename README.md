@@ -292,6 +292,9 @@ To add a link to your icon, include the icon `a` tag around the icon. If there i
 ![Horizontal text](https://raw.githubusercontent.com/stenito/fasticons/master/documentation%20assets/hh.png)  
 Text next to the icon (default)
 
+![Vertical aligned text](https://raw.githubusercontent.com/stenito/fasticons/master/documentation%20assets/vh.png)  
+Text under the icon (`has-aligned-vertical`)
+
 Horizontal alignment is default.
 
 To change the text position, add a `has-aligned-center` class to the `icon-list` `div`.
